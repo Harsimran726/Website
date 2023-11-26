@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+    section.pro
+    {
+        background-color: #161616;
+        height: 120vh;
+    }
+    section.pro div.phco
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 5%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section.pro div.phco div.ph
+    {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.pro div.phco div.ph div.main
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.pro div.phco div.ph div.main img.head
+    {
+        width: 90%;
+        height: 90%;
+        
+    }
+    section.pro div.phco div.ph div.sub
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    section.pro div.phco div.ph div.sub img
+    {
+        width: 25%;
+        height: 90%;
+        background-color: #4169e16c;
+        border-radius: 50%;
+        padding: 2%;
+    }
+    section.pro div.phco div.con
+    {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        padding: 2%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.pro div.phco div.con h1.headline
+    {
+        color: #4169E1;
+        font-size: 30px;
+    }
+    section.pro div.phco div.con p
+    {
+        color: #4169E1  ;
+        font-size: 18px;
+    }
+    section.pro div.phco div.con ol
+    {
+        color: #FFD700;
+        font-size: 18px;
+    }
+    section.pro div.phco div.con ol li
+    {
+        margin: 2%;
+    }
+    section.pro div.phco div.con ol li a
+    {
+        text-decoration: none;
+        color: #FFD700;
+    }
+    section.pro div.phco div.con ol li a:hover
+    {
+        color: #4169E1;
+        transition: all 0.5s ease-in-out;
+    }
+    section.pro div.phco div.con button
+    {
+        width: 30%;
+        height: 10%;
+        background-color: #4169E1;
+        border: none;
+        border-radius: 5px;
+        color: #FFD700;
+        font-size: 18px;
+    }
+   
+    section.pro div.phco div.con button:hover
+    {
+        background-color: #FFD700;
+        color: #4169E1;
+        transition: all 0.5s ease-in-out;
+    }
+   
+    section.pro div.phco div.ph div.sub img:hover
+    {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+        background-color: #4169e157;
+        border-radius: 50%;
+    }
+
+</style>
+
+
+<section class="pro">
+    <div class="phco">
+        <div class="ph">
+            <div class="main">
+                {% load static %}
+                <img src="{% static 'chatbot main.png' %}" alt="" class="head">
+            </div>
+            <div class="sub">
+                <img src="{% static 'product o .png' %}" alt="">
+                <img src="{% static 'product t.png' %}" alt="">
+                <img src="{% static 'product 3.png' %}" alt="">
+            </div>
+        </div>
+        <div class="con">
+            <h1 class="headline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, eligendi?</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda alias, eaque voluptas repellat odit. Fugit necessitatibus doloremque omnis quia esse reiciendis et blanditiis laborum perferendis nisi veritatis inventore ut iusto numquam, quibusdam amet nobis. Officia deleniti quisquam modi! Accusamus!</p>
+            <ol>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Lorem ipsum dolor sit</li>
+                <li>Lorem ipsum dolor sit</li>
+                <li>Lorem ipsum dolor sit</li>
+                <li>Lorem ipsum dolor sit</li>
+                <li>Lorem ipsum dolor sit</li>
+                <li>Lorem ipsum dolor sit</li>
+            </ol>
+            <button href="#">Try now</button>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
