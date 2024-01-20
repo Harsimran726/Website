@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bytebrainsai.online/{{Post.slug}}"
+  },
+  "headline": {{Post.title}},
+  "description": {{Post.subheading}},
+  "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/rabbit-r1-110903400-16x9_0.jpg?VersionId=9hnmtvaw3OAAVULGa76phFSL97WYIAow&size=690:388",  
+  "author": {
+    "@type": "Organization",
+    "name": "Byte Brains Ai"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Byte Brains Ai",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ibb.co/XVtCprS"
+    }
+  },
+  "datePublished": "2024-01-19"
+}
+</script>
+<meta name="google-adsense-account" content="ca-pub-7505292509269780">
+<style>
+    section.header {
+        width: 100%;
+       
+    }
+    section.header img{
+        width: 100%;
+        background-size: cover;
+    }
+
+    section.post {
+      background-color: #161616;
+        width: 100%;
+        margin-top: 20px;
+        margin-top: 40px;
+        padding: 10%;
+        margin: auto;
+    }
+    section.post .card {
+        width: 100%;
+        margin: auto;
+        background: whitesmoke;
+        margin-bottom: 20px;
+    }
+    
+    section.post .card .card-img {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        background-size: cover;
+    }
+    ection.post .card .card-img img {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        background-size: cover;
+    }
+    section.post .card img:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    section.post .card .card-body {
+        width: 100%;
+        margin: auto;
+    }
+    section.post .card .card-body .card-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4169E1;
+    }
+    section.post .card .card-body .card-text {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    section.post .card .card-body a {
+        font-size: 15px;
+        font-weight: 500;
+        color: #4169E1;
+        text-decoration: none;
+    }
+</style>
+
+<section class="header">
+    <img src="{% static 'AI BLOG.png' %}" alt="">
+</section>
+<section class="post">
+  {% for Post in post %}
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-img">
+          <img src="{{ Post.imali}}" class="card-img-top" alt="...">
+         
+        </div>
+       
+        <div class="card-body">
+          <h5 class="card-title">{{Post.title}}</h5>
+          <p class="card-text" | truncatechars:100>{{Post.subheading}}</p>
+          <a href="{{Post.slug}}">Learn more...</a>  
+        </div>
+      </div>
+    </div>
+   
+   
+  </div>
+  {% endfor %}
+  </section>
+
+{% endblock %}

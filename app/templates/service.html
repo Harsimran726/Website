@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+
+section.service
+{
+    background-color: #161616;
+    height: 280vh;
+}
+section.service div.serv
+{display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+section.service div.serv div.imgs
+{
+   width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.service div.serv div.imgs img
+{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    border-radius: 10px;
+}
+section.service div.serv div.deta
+{ width: 100%;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.service div.serv div.deta h2
+{
+    color: #4169E1;
+}
+section.service div.serv div.deta p
+{
+    color: #FFD700;
+}
+section.service div.serv div.deta button
+{
+    width: 20%;
+    height: 5%;
+    padding: 1%;
+    border: none;
+    border-bottom: 1px solid #4169E1;
+    background-color: #161616;
+    color: #FFD700;
+}
+section.service div.serv div.deta button:hover
+{
+    color: #4169E1;
+    transition: all 0.5s ease-in-out;
+}
+section.service div.serv div.imgs div.mainim
+{
+    width: 100%;
+    height: 100%;
+}
+section.service div.serv div.imgs div.smim
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+section.service div.serv div.imgs div.smim img
+{
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+
+section.service div.serv div.deta ol li
+{
+    color: #FFD700;
+    align-self: start;
+}
+section.service div.serv div.deta h3{
+    color: #4169E1;
+}
+section.service div.serv div.deta ol.why li{
+    list-style: none;
+    list-style-position: inside;
+}
+
+section.service div.serv div.imgs img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+section.service a{
+text-decoration:none;
+transition: all 0.5s ease-in-out;	
+}
+section.service a:hover{
+color: #FFD700;
+}
+
+@media screen and (max-width:1069px){
+
+	section.service
+{
+    background-color: #161616;
+    height: 220vh;
+}
+section.service div.serv
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+section.service div.serv div.imgs
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section.service div.serv div.deta
+{
+    width: 100%;
+    height: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+}
+
+</style>
+
+<section class="service">
+    <div class="serv">
+        <div class="imgs">
+           <div class="mainim">
+            {% load static %}
+            <img src="{% static 'main wd f.png' %}" alt="">
+           </div>
+           <div class="smim">
+            <img src="{% static 'man wd.png' %}" alt="Byte Brains AI Web Development Services">
+            <img src="{% static 'manwd.png' %}" alt="Unlock Your Potential With Byte Brains Ai">
+            <img src="{% static 'wd ma.png' %}" alt="Byte Brians Ai Advance Web Development Services">
+           </div>
+        </div>
+        <div class="deta">
+            <h2>
+                Byte Brains Ai Web Development Services
+            </h2>
+            <p> 🚀 Welcome to Byte Brains AI, where we transform web development into an intelligent and innovative experience! Our Advanced Web Development with AI Integrations service seamlessly merges the power of artificial intelligence with cutting-edge web solutions. Elevate your online presence and user experience with Byte Brains AI. </p>
+            <h3>Key Benifits</h3>
+            <ol>
+                
+                <li>Smart User Interactions</li>
+                <li>Efficient Automation</li>
+                <li>Predictive Analytics</li>
+                <li>Enhanced Security Measures</li>
+                <li>Future-Proof Scalability</li>
+            </ol>
+            <h3>Why Byte Brians Ai?</h3>
+            <ol class="why">
+                <li>Choose Byte Brains AI for unparalleled expertise in AI-driven solutions. Our seasoned team merges cutting-edge technology with a collaborative approach, ensuring tailored results that align with your business vision. We prioritize security, adhering to the highest standards, and guaranteeing compliance. With an agile development methodology, we adapt to your evolving needs, delivering dynamic and scalable solutions. Trust in our commitment to innovation; Byte Brains AI doesn't just create applications; we craft intelligent experiences that set you apart in the digital landscape. Your success is our priority, making us the ideal partner for transforming your aspirations into reality.</li>
+            </ol>
+            <button ><a href="{% url 'contact' %}">Contact Now</a></button>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

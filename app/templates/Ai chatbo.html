@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+    section.pro
+    {
+        background-color: #161616;
+        height: 380vh;
+    }
+    section.pro div.phco
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 5%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    section.pro div.phco div.ph
+    {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+margin:auto;
+        justify-content: space-between;
+    }
+    section.pro div.phco div.ph div.main
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.pro div.phco div.ph div.main img.head
+    {
+        width: 90%;
+        height: 90%;
+        
+    }
+    section.pro div.phco div.ph div.sub
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    section.pro div.phco div.ph div.sub img
+    {
+        width: 25%;
+        height: 90%;
+        background-color: #4169e16c;
+        border-radius: 50%;
+        padding: 2%;
+    }
+    section.pro div.phco div.con
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 2%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section.pro div.phco div.con h1.headline
+    {
+        color: #FFD700;
+        font-size: 30px;
+    }
+    section.pro div.phco div.con p
+    {
+        color: #4169E1  ;
+        font-size: 18px;
+    }
+    section.pro div.phco div.con ol
+    {
+        color: #FFD700;
+        font-size: 18px;
+    }
+    section.pro div.phco div.con ol li
+    {
+        margin: 2%;
+    }
+    section.pro div.phco div.con ol li a
+    {
+        text-decoration: none;
+        color: #FFD700;
+    }
+    section.pro div.phco div.con ol li a:hover
+    {
+        color: #4169E1;
+        transition: all 0.5s ease-in-out;
+    }
+    section.pro div.phco div.con button
+    {
+        width: 30%;
+        height: 10%;
+        background-color: #4169E1;
+        border: none;
+        border-radius: 5px;
+        color: #FFD700;
+        font-size: 18px;
+    }
+   
+    section.pro div.phco div.con button:hover
+    {
+        background-color: #FFD700;
+        color: #4169E1;
+        transition: all 0.5s ease-in-out;
+    }
+   
+    section.pro div.phco div.ph div.sub img:hover
+    {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
+        background-color: #4169e157;
+        border-radius: 50%;
+    }
+section.pro div.third{
+padding:5%;
+flex-direction:row;
+
+}
+section.pro div.third li{
+color:#4169E1;
+}
+
+h2{
+color:#FFD700;
+margin:2%;	
+}
+section.pro div.third p{
+color:#4169E1;
+margin-top:4%;
+}
+
+section.pro button{
+        
+        background-color: #4169E1;
+        border: none;
+        border-radius: 5px;
+        color: #FFD700;
+        font-size: 18px;
+}
+section.pro button{
+margin:auto;
+background-color: #FFD700;
+        color: #4169E1;
+        transition: all 0.5s ease-in-out;
+}
+a{
+text-decoration: none;
+color:black; 	
+}
+</style>
+
+
+<section class="pro">
+    <div class="phco">
+        <div class="ph">
+            <div class="main">
+                {% load static %}
+                <img src="{% static 'chatbot main.png' %}" alt="" class="head">
+            </div>
+            <div class="sub">
+                <img src="{% static 'product o .png' %}" alt=" Byte Brains Ai Advance Chatbot">
+                <img src="{% static 'product t.png' %}" alt="Byte Brains Ai Advance Chatbot for E-commerec ">
+                <img src="{% static 'product 3.png' %}" alt="Byte Brains Ai Advance Chatbot with GPT 4 Integrations">
+            </div>
+        </div>
+        <div class="con">
+            <h1 class="headline"><span>Byte Brains AI</span>: Advance AI Chatbots for Your E-Commerce Business </h1>
+            <p>Transform your online store with Byte Brains AI's cutting-edge AI Advance Chatbots and unlock the potential of personalized customer interaction, 24/7 support, and increased sales.
+</p>
+<h2>What are AI Advance Chatbots?</h2>
+<p>AI Advance Chatbots are sophisticated virtual assistants powered by the latest artificial intelligence (AI) technology. These intelligent bots can:</p>
+            <ol>
+                <li>Engage in Natural Conversation with Gemini or GPT 4</li>
+                <li>FAQs</li>
+	<li>	Resolve Issues</li>
+	<li>Product Recommendation</li>
+	<li>Gemini or GPT-4 Integrations </li>
+	<li> Collect Valuable data and use them </li>
+               
+            </ol>
+
+            <button><a href="contact"> Try now</a></button>
+        </div>
+
+    </div>
+<div class="third">
+<h2>Why Choose Byte Brains Ai For your Business?</h2>
+<li> Cutting-edge AI technology </li>
+<li> Seamless integration </li>
+<li> Omnichannel support</li>
+<li> 24/7 availability</li>
+<li> Advanced features (Gemini or GPT 4)</li>
+<li> Ai Integration Ai Gemini or GPT 4</li>
+<li> Real-time order tracking</li>
+<li> Live chat handover</li>
+<li> Customization</li>
+<li> Analytics and reporting</li>
+<h2> Benifits of using Ai Advance Chatbot in your Business</h2>
+<li>Improved customer service</li>
+<li>Increased sales and conversions</li>
+<li>Reduced operational costs</li>
+<li>Increased customer satisfaction</li>
+<li>Improved brand reputation </li>
+<p class="third">
+Ready to Get Started with Byte Brains AI?
+
+Contact us today to learn more about how our AI Advance Chatbots can help your e-commerce business grow and succeed. We offer a free consultation to discuss your specific needs and recommend the best chatbot solution for your company.
+
+Let Byte Brains AI power the future of your e-commerce business with intelligent chatbots that drive conversions, build customer loyalty, and unlock your full potential.
+
+           <br><br> <button><a href="contact"> Try now</a></button>
+</p>
+</div>
+</section>
+
+
+{% endblock %}
