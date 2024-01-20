@@ -23,3 +23,53 @@ HOme Page Schema:-
   ]
 }
 </script>
+
+product schema 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Product", 
+  "name": "Ai Customer Support Chatbot",
+  "image": "https://ibb.co/tMgv6j8",
+  "description": "Introducing Byte Brains AI's AI Customer Support Chatbot – powered by ChatGPT 4 Turbo and Gemini Pro. Enjoy 24/7 assistance, hosted on VPS servers, and cut user support costs by up to 70%. Elevate your customer service with our advanced AI solutions.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Byte Brains Ai"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "bestRating": "4.7",
+    "worstRating": "3.2",
+    "ratingCount": "12"
+  }
+}
+</script>
+
+Blog Schema:-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bytebrainsai.online/Revolutionizing-Human-Machine-Interaction-The-Future-Unveiled-by-LAM-and-rabbit-r1/"
+  },
+  "headline": "Revolutionizing Human-Machine Interaction: The Future Unveiled by LAM and r1",
+  "description": "In the rapidly evolving landscape of artificial intelligence, the advent of cutting-edge technologies is reshaping the way we interact with machines. One such groundbreaking innovation comes from the rabbit research team, introducing the Large Action Model (LAM) and the revolutionary r1 device. This blog explores the transformative potential of LAM and r1, offering a glimpse into the future of human-machine interface.",
+  "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/rabbit-r1-110903400-16x9_0.jpg?VersionId=9hnmtvaw3OAAVULGa76phFSL97WYIAow&size=690:388",  
+  "author": {
+    "@type": "Organization",
+    "name": "Byte Brains Ai"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Byte Brains Ai",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ibb.co/XVtCprS"
+    }
+  },
+  "datePublished": "2024-01-19"
+}
+</script>
