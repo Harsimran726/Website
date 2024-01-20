@@ -1,0 +1,25 @@
+HOme Page Schema:-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Byte Brains Ai",
+  "alternateName": "Byte Ai",
+  "url": "https://bytebrainsai.online/",
+  "logo": "http://bytebrainsai.online/",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "7814351011",
+    "contactType": "technical support",
+    "contactOption": "HearingImpairedSupported",
+    "areaServed": ["US","GB","CA","IN","FR"],
+    "availableLanguage": ["en","fr","Hindi"]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/byte-brains-ai",
+    "https://bytebrainsai.online/",
+    "https://www.instagram.com/bytebrainsai/",
+    "https://www.youtube.com/@ByteBrainsAI/"
+  ]
+}
+</script>
