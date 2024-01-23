@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-h_vzjdn9266l_41pz9-2s@8w*xzg!)$t=&kpij1a4(sr7re6sz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['43.204.24.71','bytebrainsai.online','www.bytebrainsai.online','https://www.bytebrainsai.online/']
+ALLOWED_HOSTS = ['43.204.24.71','bytebrainsai.online','www.bytebrainsai.online','https://www.bytebrainsai.online/','147.182.246.214','24.144.68.113']
 CSRF_TRUSTED_ORIGINS = ['https://*.bytebrainsai.online']
 
 
