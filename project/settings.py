@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic', # new
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
+     'ckeditor',
+    'ckeditor_uploader'
 ]
 
 
