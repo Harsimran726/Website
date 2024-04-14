@@ -1,17 +1,33 @@
 from django.db import models
 from django.contrib.auth.models import User
 from ckeditor.fields import RichTextField
+from django.contrib import admin
 # Create your models here.
+
+    
+
+class ChatConversation(models.Model):
+    #userid = models.IntegerField(unique=True)
+    session_id = models.CharField(max_length=1000)
+    bot_message = models.CharField(max_length=10000,null=True)
+    user_message = models.CharField(max_length=10000)
+    timestamp = models.DateTimeField(auto_now_add=True)  # Automatically record creation time
+    class meta:
+        ordering = ['-timestamp','-session_id']
+
+    def __str__(self):
+        return f"{self.timestamp}" + " - " + f"{self.session_id}"
 
 
 class query(models.Model):
-	name = models.CharField(max_length=200)
-	email = models.EmailField()
-	
-	subject = models.CharField(max_length=200)
-	message = models.TextField()
-	def __str__(self):
-		return self.name
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    subject = models.CharField(max_length=300)
+    message = models.TextField()
+    time = models.DateTimeField(auto_now_add=True,null=True)
+
+    def __str__(self):
+        return self.name + " - " + str(self.time)
 
 STATUS = ((0, "Draft"),(1, "Publish"))
 

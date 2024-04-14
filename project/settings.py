@@ -13,8 +13,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from django.urls import path
 import os
-import whitenoise
-
 from django.conf.urls.static import static
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,9 +26,9 @@ SECRET_KEY = 'django-insecure-h_vzjdn9266l_41pz9-2s@8w*xzg!)$t=&kpij1a4(sr7re6sz
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['43.204.24.71','bytebrainsai.online','www.bytebrainsai.online','https://www.bytebrainsai.online/','147.182.246.214','24.144.68.113']
-CSRF_TRUSTED_ORIGINS = ['https://*.bytebrainsai.online']
+"""
+ALLOWED_HOSTS = ['43.204.24.71','bytebrainsai.online','www.bytebrainsai.online','https://www.bytebrainsai.online/']
+CSRF_TRUSTED_ORIGINS = ['https://*.bytebrainsai.online']"""
 
 
 # Application definition
@@ -41,21 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'whitenoise.runserver_nostatic', # new
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
-     'ckeditor',
-    
+    'app'
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # new
     'django.middleware.csrf.CsrfViewMiddleware',
+    # new
+    
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -132,7 +128,7 @@ STATICFILES_DIRS = [
     BASE_DIR, "static"
     
 ]
-
+    
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 

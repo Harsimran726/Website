@@ -3,15 +3,19 @@
 {% block content %}
 
 <style>
+  body{
+    background-color: #c5c5c5;
+  }
       section.three {
                 width: 100%;
                 height: 100%;
                 display: flex;
+                padding: 7%;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                background-color: #161616;
+                background-color: #c5c5c59c;
                 height: 150vh;
             }
             section.three div.products{
@@ -27,7 +31,7 @@
                 font-weight: 700;
                 line-height: 1.2;
                 margin-bottom: 20px;
-                color: #FFD700  ;
+                color: #4169E1;  ;
             }
             section.three div.products h2.prod{
                 font-size: 40px;
@@ -52,7 +56,7 @@
             }
             
             section.three div.prodlist div.one img.robot {
-  width: 65%;
+  width: 50%;
   filter: grayscale(1);
   transition: filter 0.3s ease-in-out;
 }
@@ -81,7 +85,7 @@ section.three div.prodlist div.one img.robot:hover:after {
             section.three div.prodlist h3{
                 padding: 2%;
     font-size: 20px;
-    color: #FFD700;
+    color: #4169E1;
     margin: 20px 0px 20px 0px;
             }
             section.three div.prodlist a{    
@@ -173,7 +177,15 @@ height:120vh;
 }
 
 }
-
+section.footer {
+  background-color: #000000;
+  list-style-type: none;
+  text-decoration: none ;
+  
+}
+section.footer li{
+  list-style-type: none;
+}
 @media (min-width:500px) and (max-width:800px){
 
 section.three div.prodlist{
@@ -191,21 +203,17 @@ height:220vh;
 
 <section class="three">
     <div class="products">
-        <h2 class="pro">OUR PRODUCTS & SERVICES</h2>
+        <h2 class="pro">OUR PRODUCTS</h2>
         
     </div>
     <div class="prodlist">
             <div class="one">
                 {% load static %}
                 <img src="{% static 'static\robot.png   ' %}" alt="" class="robot">
-                <h3 class="proheado">AI Customer Support Chatbot with GPT 4.5 Turbo </h3>
+                <h3 class="proheado">AI Personalized Customer Support Chatbot </h3>
                 <a href="ai-chatbot">learn more..</a>
             </div>
-            <div class="two">
-                <img src="{% static 'prd2.png' %}" alt="" class="custome">
-                <h3 class="proheadt">Custome AI Software for Your Business</h3>
-                <a href="">learn more..</a>
-            </div>
+            
     </div>
     
      
