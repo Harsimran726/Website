@@ -1,4 +1,3 @@
-random 
 google-generativeai
 markdown
 gunicorn
