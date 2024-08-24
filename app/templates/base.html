@@ -442,7 +442,14 @@ chatCard.scrollTop = chatCard.scrollHeight;
 document.addEventListener('DOMContentLoaded', function(){
    document.querySelector('#submitBtn').addEventListener('click', () => chat_ajax());
 });
+document.querySelector('#userText').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        chat_ajax();
+    }
+});
 
+document.querySelector('#submitBtn').addEventListener('click', () => chat_ajax());
 function myFunction() {
    document.getElementById("userText").disabled = true;
    document.querySelector('#userText').setAttribute('placeholder', 'Please wait, your result will come soon...');
